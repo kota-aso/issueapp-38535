@@ -9,7 +9,7 @@ import java.util.List;
 @Mapper
 public interface IssueRepository {
     @Insert("insert into issues (title, content, period, importance) values (#{title}, #{content}, #{period}, #{importance})")
-    void insert(String title, String content, String period, char importance);
+    void insert(String title, String content, String period, String importance);
 
     @Select("select * from issues")
     List<IssueEntity> findAll();
